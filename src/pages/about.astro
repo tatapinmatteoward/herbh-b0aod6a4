@@ -1,0 +1,219 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const features = [
+  {
+    icon: 'fas fa-leaf',
+    title: 'Sustainability',
+    text: 'Partnering with organic farmers to ensure every leaf and root is grown without harmful chemicals.'
+  },
+  {
+    icon: 'fas fa-graduation-cap',
+    title: 'Education',
+    text: 'Empowering you with knowledge on herbal remedies and wellness practices.'
+  },
+  {
+    icon: 'fas fa-heart',
+    title: 'Authenticity',
+    text: 'Using time-tested herbs and traditional methods for genuine healing.'
+  }
+];
+
+const values = [
+  {
+    title: 'Respect for Nature',
+    description: 'We honor the earth\'s abundance and work in harmony with natural cycles.'
+  },
+  {
+    title: 'Community Wellness',
+    description: 'Our mission extends beyond products to fostering holistic wellness in all we serve.'
+  },
+  {
+    title: 'Quality Excellence',
+    description: 'Every product undergoes rigorous standards to ensure purity and potency.'
+  }
+];
+---
+
+<Layout title="About Herb & Harmony" description="Explore the origins, mission, and values of Herb & Harmony, where we blend ancient herbal wisdom with modern wellness practices to nurture your health naturally.">
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-b from-emerald-900 to-emerald-700 py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjEiLz4KPC9zdmc+')]"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+          About <span class="text-amber-500">Herb & Harmony</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-emerald-100 font-serif max-w-2xl mx-auto">
+          Nurturing Wellness Through Nature's Herbal Wisdom
+        </p>
+        <div class="mt-8 flex justify-center">
+          <div class="w-24 h-1 bg-amber-500 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Origin Story Section -->
+  <section class="py-16 md:py-24 bg-emerald-50">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <div class="relative">
+            <div class="w-full h-80 bg-gradient-to-br from-emerald-200 to-emerald-400 rounded-2xl shadow-xl"></div>
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-500 rounded-full opacity-20"></div>
+            <div class="absolute -top-6 -left-6 w-24 h-24 bg-emerald-700 rounded-full opacity-20"></div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-emerald-900 mb-6">
+            Nurturing Wellness Through Nature's Herbal Wisdom
+          </h2>
+          <p class="text-lg text-emerald-700 mb-6 leading-relaxed">
+            At <span class="font-serif font-bold text-emerald-800">Herb & Harmony</span>, we believe in the profound healing power of nature. Our journey began with a simple passion for herbs and a deep respect for the earth's bounty. Founded in the serene hills of the Pacific Northwest, we've grown into a trusted source for <span class="font-serif italic text-emerald-800">organic, earthy wellness</span> solutions that harmonize body, mind, and spirit.
+          </p>
+          <p class="text-lg text-emerald-700 leading-relaxed">
+            Our commitment extends beyond products to fostering a deeper connection with the natural world and our own innate healing abilities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-emerald-900 mb-4">Our Mission</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-emerald-700 text-center mb-12 leading-relaxed">
+          We are dedicated to providing high-quality, ethically sourced herbal products and holistic guidance. Our tagline, 
+          <span class="italic"> "Nurturing Wellness Through Nature's Herbal Wisdom"</span>, encapsulates our commitment to:
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div 
+              key={index} 
+              class="bg-gradient-to-br from-emerald-50 to-amber-50 rounded-2xl p-6 border border-emerald-100 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-4">
+                <i class={`${feature.icon} text-2xl text-emerald-700`}></i>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-emerald-900 mb-3">{feature.title}</h3>
+              <p class="text-emerald-700">{feature.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-emerald-900 to-emerald-800">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Our Core Values</h2>
+        <div class="w-24 h-1 bg-amber-400 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {values.map((value, index) => (
+          <div 
+            key={index} 
+            class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 border border-white border-opacity-20"
+          >
+            <h3 class="text-xl font-serif font-bold text-amber-300 mb-3">{value.title}</h3>
+            <p class="text-emerald-100">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-16 md:py-24 bg-emerald-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-emerald-900 mb-4">Our Journey</h2>
+        <p class="text-lg text-emerald-700 max-w-2xl mx-auto">
+          From humble beginnings in the Pacific Northwest to becoming a trusted name in herbal wellness, our story continues to grow.
+        </p>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mt-6"></div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+        <div class="md:w-2/5">
+          <div class="relative">
+            <div class="w-full h-80 bg-gradient-to-br from-emerald-300 to-emerald-500 rounded-2xl shadow-xl"></div>
+            <div class="absolute -bottom-6 -right-6 w-16 h-16 bg-amber-500 rounded-full opacity-30"></div>
+          </div>
+        </div>
+        
+        <div class="md:w-3/5">
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mt-1">
+                <span class="text-emerald-700 font-bold">1</span>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-serif font-bold text-emerald-800">Founding Vision</h3>
+                <p class="text-emerald-700 mt-2">
+                  Our founders started with a dream to bring the healing power of herbs into modern life, rooted in traditional wisdom.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mt-1">
+                <span class="text-emerald-700 font-bold">2</span>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-serif font-bold text-emerald-800">Growing Community</h3>
+                <p class="text-emerald-700 mt-2">
+                  We've built a community of wellness seekers who value natural healing and sustainable living practices.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center mt-1">
+                <span class="text-emerald-700 font-bold">3</span>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-xl font-serif font-bold text-emerald-800">Continued Innovation</h3>
+                <p class="text-emerald-700 mt-2">
+                  We continuously research and develop new ways to honor nature's gifts while meeting modern wellness needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-r from-emerald-800 to-emerald-700">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Join Our Herbal Journey</h2>
+      <p class="text-xl text-emerald-100 max-w-2xl mx-auto mb-10">
+        Discover how our natural remedies can enhance your wellness routine and deepen your connection to nature.
+      </p>
+      <div class="flex justify-center space-x-4">
+        <a href="/products" class="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-full transition duration-300 transform hover:scale-105">
+          Explore Products
+        </a>
+        <a href="/contact" class="px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-800 font-medium rounded-full transition duration-300">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

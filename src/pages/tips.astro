@@ -1,0 +1,160 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const tips = [
+  {
+    title: "Start with Simple Remedies",
+    content: "Begin your herbal journey with basic remedies like chamomile tea for relaxation, ginger for digestion, and peppermint for headaches. These gentle starters offer immediate benefits without overwhelming your system."
+  },
+  {
+    title: "Choose Organic Sources",
+    content: "Always opt for certified organic herbs to avoid pesticides and ensure purity. Our selection at Herb & Harmony is sourced sustainably from trusted growers who respect both the earth and the plants."
+  },
+  {
+    title: "Build a Basic Toolkit",
+    content: "Stock essentials like chamomile for relaxation, ginger for digestion, and lavender for stress relief. These versatile herbs can be used in teas, tinctures, or as aromatherapy."
+  },
+  {
+    title: "Listen to Your Body",
+    content: "Herbal wellness is deeply personal. Pay attention to how your body responds to different herbs. What brings you balance today might not be the same tomorrow."
+  },
+  {
+    title: "Create Herbal Rituals",
+    content: "Incorporate herbs into daily practices like morning tea, evening wind-down routines, or seasonal preparations. These rituals create harmony and mindfulness in your everyday life."
+  },
+  {
+    title: "Preserve Your Harvest",
+    content: "Learn to dry, store, and preserve herbs properly. This ensures you have your herbal remedies ready when you need them most, especially during seasons when fresh plants aren't available."
+  }
+];
+
+const herbTypes = [
+  {
+    name: "Aromatic Herbs",
+    description: "Perfect for teas and aromatherapy",
+    icon: "fas fa-seedling"
+  },
+  {
+    name: "Digestive Herbs",
+    description: "Support gut health and comfort",
+    icon: "fas fa-utensils"
+  },
+  {
+    name: "Stress-Relieving",
+    description: "Calming and grounding remedies",
+    icon: "fas fa-spa"
+  },
+  {
+    name: "Immune Support",
+    description: "Natural defenses for wellness",
+    icon: "fas fa-shield-alt"
+  }
+];
+---
+
+<Layout title="Herbal Wellness Tips for Everyday Harmony" description="Discover practical tips from Herb & Harmony to incorporate nature's herbal wisdom into your daily routine for optimal wellness and balance.">
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-br from-[#2e7d32] to-[#1b5e20] py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmYiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Herbal Wellness Tips for Everyday Harmony</h1>
+        <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Discover practical tips from Herb & Harmony to incorporate nature's herbal wisdom into your daily routine for optimal wellness and balance.</p>
+        <div class="bg-white/10 backdrop-blur-sm rounded-full py-3 px-6 inline-block">
+          <p class="text-white font-serif italic">Nurturing Wellness Through Nature's Herbal Wisdom</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Welcome Section -->
+  <section class="py-16 bg-gradient-to-b from-white to-[#e8f5e9]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex items-center mb-8">
+          <div class="w-16 h-16 rounded-full bg-[#2e7d32] flex items-center justify-center mr-4">
+            <i class="fas fa-leaf text-white text-2xl"></i>
+          </div>
+          <h2 class="text-3xl font-serif font-bold text-[#2e7d32]">Welcome to Herbal Wellness Tips</h2>
+        </div>
+        
+        <div class="prose prose-lg max-w-none text-gray-700">
+          <p class="mb-6">At <strong>Herb & Harmony</strong>, we believe in the power of nature's gifts to foster balance and vitality in your life. Our tagline, <em>Nurturing Wellness Through Nature's Herbal Wisdom</em>, guides everything we do. Whether you're new to herbalism or a seasoned enthusiast, these tips will help you integrate organic, earthy practices into your everyday routine for holistic well-being.</p>
+          
+          <div class="bg-white p-8 rounded-xl shadow-md border-l-4 border-[#bf360c] my-8">
+            <h3 class="text-xl font-serif font-semibold text-[#2e7d32] mb-4">Getting Started with Herbs</h3>
+            <p class="mb-4">Embarking on your herbal journey? Start simple and build from there:</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong>Choose Organic Sources</strong>: Always opt for <em>certified organic herbs</em> to avoid pesticides and ensure purity. Our selection at Herb & Harmony is sourced sustainably from trusted growers.</li>
+              <li><strong>Build a Basic Toolkit</strong>: Stock essentials like chamomile for relaxation, ginger for digestion, and</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips Grid -->
+  <section class="py-16 bg-[#e8f5e9]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-serif font-bold text-[#2e7d32] mb-4">Daily Herbal Wisdom</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Simple practices to weave herbal magic into your everyday life</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {tips.map((tip, index) => (
+          <div key={index} class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:shadow-xl hover:-translate-y-2">
+            <div class="p-6">
+              <div class="w-12 h-12 rounded-full bg-[#2e7d32] flex items-center justify-center mb-4">
+                <i class="fas fa-leaf text-white"></i>
+              </div>
+              <h3 class="text-xl font-serif font-semibold text-[#2e7d32] mb-3">{tip.title}</h3>
+              <p class="text-gray-700">{tip.content}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Herb Types Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-serif font-bold text-[#2e7d32] mb-4">Herbal Categories</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Understanding the different types of herbs for targeted wellness</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {herbTypes.map((type, index) => (
+          <div key={index} class="bg-gradient-to-br from-[#f1f8e9] to-[#e8f5e9] rounded-xl p-6 text-center border border-[#c8e6c9] transition-all duration-300 hover:shadow-md">
+            <div class="w-16 h-16 rounded-full bg-[#2e7d32] flex items-center justify-center mx-auto mb-4">
+              <i class={`${type.icon} text-white text-2xl`}></i>
+            </div>
+            <h3 class="text-xl font-serif font-semibold text-[#2e7d32] mb-2">{type.name}</h3>
+            <p class="text-gray-700">{type.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#2e7d32] to-[#1b5e20]">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Begin Your Herbal Journey Today</h2>
+      <p class="text-xl text-green-100 mb-10 max-w-2xl mx-auto">Discover our curated collection of organic herbs and learn more about nature's healing gifts</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-[#bf360c] hover:bg-[#d81b60] text-white font-semibold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+          Shop Our Herbs
+        </button>
+        <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold py-3 px-8 rounded-full transition duration-300">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>

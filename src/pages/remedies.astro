@@ -1,0 +1,197 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const features = [
+  { 
+    icon: 'fas fa-leaf', 
+    title: 'Natural Efficacy', 
+    text: 'Backed by centuries of traditional use and modern insights.' 
+  },
+  { 
+    icon: 'fas fa-seedling', 
+    title: 'Eco-Friendly', 
+    text: 'Sourced responsibly to honor the earth.' 
+  },
+  { 
+    icon: 'fas fa-heart', 
+    title: 'Personalized Wellness', 
+    text: 'Tailored blends for mind, body, and spirit.' 
+  }
+];
+
+const remedies = [
+  {
+    title: 'Serenity Blend Tea for Stress Relief',
+    description: 'Ideal for unwinding after a hectic day, this aromatic blend combines chamomile, lavender, and passionflower to soothe the nervous system.',
+    benefits: ['Reduces anxiety', 'Promotes restful sleep', 'Calms the mind'],
+    image: 'serenity-tea'
+  },
+  {
+    title: 'Immune Support Tincture',
+    description: 'A powerful combination of elderberry, echinacea, and ginger to strengthen your body\'s natural defenses.',
+    benefits: ['Boosts immunity', 'Reduces inflammation', 'Supports respiratory health'],
+    image: 'immune-tincture'
+  },
+  {
+    title: 'Digestive Harmony Blend',
+    description: 'Gentle herbs like peppermint, fennel, and ginger work together to support healthy digestion and reduce discomfort.',
+    benefits: ['Alleviates bloating', 'Supports digestion', 'Reduces stomach upset'],
+    image: 'digestive-blend'
+  }
+];
+
+const testimonials = [
+  {
+    quote: 'These remedies have transformed my daily routine. I feel more balanced and grounded.',
+    author: 'Sarah M.',
+    rating: 5
+  },
+  {
+    quote: 'The Serenity Blend Tea is my go-to for evening wind-downs. So effective!',
+    author: 'Michael T.',
+    rating: 5
+  },
+  {
+    quote: 'I\'ve tried many herbal products, but these are truly different. The quality is exceptional.',
+    author: 'Jessica L.',
+    rating: 5
+  }
+];
+---
+
+<Layout title="Natural Herbal Remedies" description="Explore our curated selection of organic herbal remedies at Herb & Harmony, designed to nurture your wellness with nature's finest ingredients. From stress relief to immune support, discover holistic solutions for everyday health.">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-[#2e7d32] to-[#1b5e20] text-white py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjEiIGZpbGw9IiNmZmYiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6">Natural Herbal Remedies</h1>
+        <p class="text-xl md:text-2xl mb-8 font-serif italic">Nurturing Wellness Through Nature's Herbal Wisdom</p>
+        <p class="text-lg max-w-2xl mx-auto mb-10">Discover our curated selection of organic herbal remedies designed to nurture your wellness with nature's finest ingredients.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <button class="bg-white text-[#2e7d32] hover:bg-[#e8f5e9] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+            Explore Remedies
+          </button>
+          <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition duration-300">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Herbal Remedies -->
+  <section class="py-16 bg-[#f5f5f5]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#2e7d32] mb-4">Why Choose Herbal Remedies</h2>
+        <div class="w-24 h-1 bg-[#bf360c] mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <div 
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-[#e0e0e0] transform hover:-translate-y-2 transition-transform duration-300"
+            key={index}
+          >
+            <div class="text-5xl text-[#2e7d32] mb-6">
+              <i class={feature.icon}></i>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-[#2e7d32] mb-4">{feature.title}</h3>
+            <p class="text-gray-700">{feature.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Remedies -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#2e7d32] mb-4">Our Featured Remedies</h2>
+        <div class="w-24 h-1 bg-[#bf360c] mx-auto mb-6"></div>
+        <p class="max-w-2xl mx-auto text-gray-600">Discover our carefully crafted herbal blends designed to support your health and well-being</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        {remedies.map((remedy, index) => (
+          <div 
+            class="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-3 border border-[#e0e0e0]"
+            key={index}
+          >
+            <div class="h-48 bg-gradient-to-r from-[#4caf50] to-[#2e7d32] flex items-center justify-center">
+              <div class="bg-white/20 backdrop-blur-sm rounded-full w-24 h-24 flex items-center justify-center">
+                <i class="fas fa-leaf text-white text-4xl"></i>
+              </div>
+            </div>
+            <div class="p-6 bg-[#f9f9f9]">
+              <h3 class="text-xl font-bold font-serif text-[#2e7d32] mb-3">{remedy.title}</h3>
+              <p class="text-gray-700 mb-4">{remedy.description}</p>
+              <div class="mb-4">
+                <h4 class="font-semibold text-[#bf360c] mb-2">Key Benefits:</h4>
+                <ul class="space-y-1">
+                  {remedy.benefits.map((benefit, i) => (
+                    <li key={i} class="flex items-start">
+                      <i class="fas fa-check-circle text-[#2e7d32] mt-1 mr-2"></i>
+                      <span class="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button class="w-full bg-[#2e7d32] hover:bg-[#1b5e20] text-white font-medium py-2 rounded-lg transition duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-gradient-to-br from-[#e8f5e9] to-[#c8e6c9]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#2e7d32] mb-4">What Our Customers Say</h2>
+        <div class="w-24 h-1 bg-[#bf360c] mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div 
+            class="bg-white p-8 rounded-xl shadow-lg relative transform hover:scale-105 transition-transform duration-300"
+            key={index}
+          >
+            <div class="absolute top-0 left-0 w-full h-1 bg-[#bf360c]"></div>
+            <div class="flex mb-4">
+              {[...Array(5)].map((_, i) => (
+                <i key={i} class={`fas fa-star ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}></i>
+              ))}
+            </div>
+            <p class="text-gray-700 italic mb-6">"{testimonial.quote}"</p>
+            <p class="font-semibold text-[#2e7d32]">— {testimonial.author}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#2e7d32] to-[#1b5e20] text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Ready to Embrace Natural Wellness?</h2>
+      <p class="max-w-2xl mx-auto text-xl mb-10 opacity-90">Join thousands of others experiencing the healing power of organic herbal remedies</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-white text-[#2e7d32] hover:bg-[#e8f5e9] font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+          Browse All Remedies
+        </button>
+        <button class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-full transition duration-300">
+          Subscribe to Newsletter
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,172 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const testimonials = [
+  {
+    quote: "Herb & Harmony's chamomile lavender tea has been a game-changer for my nightly routine. After struggling with sleep for years, I finally wake up refreshed and ready to embrace the day. Thank you for bringing nature's calm into my life!",
+    author: "Sarah M., Yoga Instructor",
+    rating: 5
+  },
+  {
+    quote: "I turned to their elderberry syrup during flu season, and it worked wonders. Not only did I stay healthy, but the earthy flavors remind me of the healing power of plants. Highly recommend for immune support!",
+    author: "James R., Outdoor Enthusiast",
+    rating: 5
+  },
+  {
+    quote: "The adaptogenic blend helped me manage stress during my busiest work period. I feel more balanced and energized without the crash of caffeine. This has become part of my daily ritual.",
+    author: "Michael T., Marketing Director",
+    rating: 4
+  },
+  {
+    quote: "As a mother of two, I needed something natural for my family's wellness. Their organic teas are delicious and my kids actually drink them! A peaceful approach to health.",
+    author: "Jessica L., Mom & Teacher",
+    rating: 5
+  },
+  {
+    quote: "The rosehip syrup transformed my skin from dull to glowing. I've never felt more confident in my own skin. The natural ingredients make all the difference!",
+    author: "Emily R., Holistic Practitioner",
+    rating: 5
+  },
+  {
+    quote: "I was skeptical at first, but their calming blend truly helped with my anxiety. The gentle, natural approach feels much safer than pharmaceutical alternatives. My go-to for evening relaxation.",
+    author: "David K., Software Engineer",
+    rating: 4
+  }
+];
+
+const features = [
+  { icon: 'fas fa-leaf', title: 'Organic Ingredients', text: 'Sourced sustainably for maximum potency' },
+  { icon: 'fas fa-seedling', title: 'Natural Healing', text: 'Time-tested herbal wisdom for modern wellness' },
+  { icon: 'fas fa-leaf', title: 'Sustainable Practices', text: 'Eco-conscious packaging and production' }
+];
+---
+
+<Layout title="Testimonials - Herb & Harmony" description="Hear from our community of wellness enthusiasts who have found balance and vitality through Herb & Harmony's organic herbal products. Discover real stories of natural healing and harmony.">
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-br from-green-900 to-green-700 py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzI1YzJmZiIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">Testimonials</h1>
+        <p class="text-xl text-green-100 mb-8 font-serif">Real Stories of Natural Wellness</p>
+        <div class="flex justify-center space-x-1">
+          {[...Array(5)].map((_, i) => (
+            <i key={i} class="fas fa-star text-yellow-400"></i>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Testimonials -->
+  <section class="py-16 bg-gradient-to-b from-white to-green-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-green-900 mb-4">What Our Customers Say</h2>
+        <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div key={index} class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-green-100">
+            <div class="p-6">
+              <div class="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <i key={i} class={`fas fa-star ${i < testimonial.rating ? 'text-amber-500' : 'text-gray-300'}`}></i>
+                ))}
+              </div>
+              <p class="text-gray-700 italic mb-6">"{testimonial.quote}"</p>
+              <p class="text-green-800 font-medium">— {testimonial.author}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Stories -->
+  <section class="py-16 bg-green-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-green-900 mb-4">Our Community's Journey</h2>
+          <p class="text-lg text-green-700">Discover how Herb & Harmony has transformed lives</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+              <div class="flex items-start mb-6">
+                <div class="bg-green-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-heart text-green-700 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-serif font-bold text-green-900">Natural Relief for Chronic Conditions</h3>
+                  <p class="text-green-700 mt-1">How our herbal blends helped manage daily discomfort</p>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-4">"After years of dealing with migraines, I found relief through their migraine relief blend. The natural ingredients were gentler on my body than traditional painkillers, and I could maintain my active lifestyle."</p>
+              <p class="text-green-800 font-medium">— Amanda R., Freelancer</p>
+            </div>
+          </div>
+          
+          <div>
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+              <div class="flex items-start mb-6">
+                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                  <i class="fas fa-sun text-amber-600 text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-serif font-bold text-green-900">Energy & Vitality</h3>
+                  <p class="text-green-700 mt-1">Finding natural energy without the crash</p>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-4">"The morning vitality blend gave me the energy I needed without jitters. My mornings are now peaceful and productive, not rushed. It's become the highlight of my day."</p>
+              <p class="text-green-800 font-medium">— Robert S., Teacher</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-green-900 mb-4">Why Customers Choose Us</h2>
+        <p class="text-lg text-green-700 max-w-2xl mx-auto">Our commitment to natural wellness and quality ingredients</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <div key={index} class="text-center p-8 rounded-2xl bg-gradient-to-b from-green-50 to-white border border-green-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <i class={`${feature.icon} text-2xl text-green-700`}></i>
+            </div>
+            <h3 class="text-xl font-serif font-bold text-green-900 mb-3">{feature.title}</h3>
+            <p class="text-green-700">{feature.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-green-800 to-green-600">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Join Our Community of Wellness</h2>
+      <p class="text-xl text-green-100 max-w-2xl mx-auto mb-8">Discover your natural balance with Herb & Harmony's curated herbal wellness collection</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/shop" class="bg-white text-green-800 hover:bg-green-100 font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+          Shop Our Products
+        </a>
+        <a href="/contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-800 font-bold py-3 px-8 rounded-full transition-all duration-300">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

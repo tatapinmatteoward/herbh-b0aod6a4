@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const features = [
+  { 
+    icon: 'fas fa-seedling', 
+    title: 'Organic Purity', 
+    text: 'Sourced from sustainable farms, our herbs are free from chemicals and pesticides.' 
+  },
+  { 
+    icon: 'fas fa-blender', 
+    title: 'Expertly Blended', 
+    text: 'Each product is formulated by herbalists drawing on ancient wisdom and modern science.' 
+  },
+  { 
+    icon: 'fas fa-leaf', 
+    title: 'Earthy Harmony', 
+    text: 'Embrace a lifestyle rooted in nature, promoting mind, body, and spirit.' 
+  }
+];
+
+const offerings = [
+  {
+    title: 'Herbal Teas & Tinctures',
+    description: 'Sip on soothing blends like chamomile for calm or ginger for vitality. *Perfect for daily rituals.*',
+    cta: 'Explore Teas'
+  },
+  {
+    title: 'Wellness Kits',
+    description: 'Curated sets designed to support your wellness journey with premium herbal blends.',
+    cta: 'View Kits'
+  },
+  {
+    title: 'Herbal Remedies',
+    description: 'Natural solutions for common ailments, crafted with care and organic ingredients.',
+    cta: 'Discover Remedies'
+  }
+];
+
+const testimonials = [
+  {
+    quote: 'Herb & Harmony transformed my approach to wellness. The teas are heavenly and the remedies work beautifully.',
+    author: 'Sarah M.',
+    role: 'Wellness Advocate'
+  },
+  {
+    quote: 'I\'ve tried many herbal products, but none compare to the quality and effectiveness of Herb & Harmony.',
+    author: 'Michael T.',
+    role: 'Natural Health Enthusiast'
+  },
+  {
+    quote: 'Finally, a brand that truly understands the power of organic herbs. My family is healthier because of it.',
+    author: 'Jessica L.',
+    role: 'Mother & Caregiver'
+  }
+];
+---
+
+<Layout title="Herb & Harmony - Nurturing Wellness Through Nature's Herbal Wisdom" description="Embrace organic, earthy wellness with Herb & Harmony. Discover nature's herbal remedies for a balanced, harmonious life. Explore our premium products and expert guidance.">
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-emerald-50 to-amber-50 py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-emerald-200 rounded-full -z-10"></div>
+      <div class="absolute bottom-20 right-20 w-48 h-48 bg-amber-200 rounded-full -z-10"></div>
+      <div class="absolute top-1/3 right-1/4 w-32 h-32 bg-emerald-100 rounded-full -z-10"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-emerald-900 mb-6 leading-tight">
+          Welcome to <span class="text-emerald-700">Herb & Harmony</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-emerald-800 mb-8 font-serif">
+          Nurturing Wellness Through Nature's Herbal Wisdom
+        </p>
+        <p class="text-lg text-emerald-700 max-w-2xl mx-auto leading-relaxed">
+          In a fast-paced world, finding balance starts with nature. At Herb & Harmony, we celebrate the healing power of organic herbs, crafted with care to support your journey toward holistic wellness.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+          <button class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+            Explore Products
+          </button>
+          <button class="bg-amber-600 hover:bg-amber-700 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+            Our Story
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-emerald-900 mb-4">Why Herb & Harmony?</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {features.map((feature, index) => (
+          <div 
+            class="bg-emerald-50 rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-emerald-100"
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
+            <div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mb-6 text-emerald-700">
+              <i class={feature.icon + " fa-2x"}></i>
+            </div>
+            <h3 class="text-xl font-serif font-semibold text-emerald-900 mb-3">{feature.title}</h3>
+            <p class="text-emerald-700">{feature.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Offerings -->
+  <section class="py-20 bg-gradient-to-b from-emerald-50 to-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-emerald-900 mb-4">Our Signature Offerings</h2>
+        <p class="text-emerald-700 max-w-2xl mx-auto">Curated products designed to bring nature's healing power into your daily routine</p>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {offerings.map((offering, index) => (
+          <div 
+            key={index}
+            class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-emerald-100"
+          >
+            <div class="h-48 bg-gradient-to-r from-emerald-400 to-amber-400 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-24 h-24 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                  <i class={`fas fa-${index === 0 ? 'mug-hot' : index === 1 ? 'gift' : 'capsules'} text-white text-4xl`}></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-semibold text-emerald-900 mb-3">{offering.title}</h3>
+              <p class="text-emerald-700 mb-4">{offering.description}</p>
+              <button class="text-emerald-700 font-medium hover:text-emerald-900 transition-colors duration-300 flex items-center">
+                {offering.cta}
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-emerald-900 mb-4">What Our Community Says</h2>
+        <p class="text-emerald-700 max-w-2xl mx-auto">Hear from those who have experienced the transformative power of herbal wellness</p>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mt-4"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <div 
+            key={index}
+            class="bg-emerald-50 p-8 rounded-xl border border-emerald-100"
+          >
+            <div class="text-amber-500 mb-4">
+              <i class="fas fa-quote-left text-3xl"></i>
+            </div>
+            <p class="text-emerald-800 italic mb-6">"{testimonial.quote}"</p>
+            <div>
+              <p class="font-semibold text-emerald-900">{testimonial.author}</p>
+              <p class="text-emerald-600 text-sm">{testimonial.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-emerald-600 to-amber-600">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Ready to Begin Your Herbal Journey?</h2>
+      <p class="text-emerald-100 max-w-2xl mx-auto mb-10 text-xl">
+        Experience the natural healing power of organic herbs with our premium products
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-white text-emerald-700 hover:bg-emerald-50 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+          Shop Now
+        </button>
+        <button class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-700 font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>
